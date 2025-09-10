@@ -4,7 +4,7 @@ from inserir_produto import listar_produtos, excluir_produto
 
   # criar excluir_usuario no inserir_usuario.py
 
-def exibir_usuarios():
+def exibir_produtos():
     produtos = listar_produtos()  # pega os usuários do banco
 
     if not produtos:
@@ -35,8 +35,8 @@ def exibir_usuarios():
     listbox = tk.Listbox(janela_lista, width=60, height=10)
     listbox.pack(padx=10, pady=10, fill="both", expand=True)
 
-    for id_cliente, descricao, valor  in pr:
-        listbox.insert(tk.END, f"{nome} | {senha}")
+    for id_cliente, descricao, valor  in produtos:
+        listbox.insert(tk.END, f" {id_cliente} | {descricao} | {valor}")
 
     # Função para atualizar listbox
     def atualizar_lista():

@@ -15,7 +15,7 @@ def inserir_produto(descricao, valor):
 def listar_produtos():
     con = conectar()
     cursor = con.cursor()
-    cursor.execute("SELECT descricao, valor FROM produto")
+    cursor.execute("SELECT descricao, valor FROM produtos")
     resultado = cursor.fetchall()  # retorna lista de tuplas
     cursor.close()
     con.close()
@@ -24,7 +24,7 @@ def listar_produtos():
 def excluir_produto(id_produto):
     con = conectar()
     cursor = con.cursor()
-    cursor.execute("DELETE FROM produto WHERE id_produto = %s", (id_produto,))
+    cursor.execute("DELETE FROM produtos WHERE id_produtos = %s", (id_produto,))
     con.commit()
     cursor.close()
     con.close()

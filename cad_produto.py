@@ -1,7 +1,7 @@
 import tkinter as tk
 from tkinter import messagebox
 from inserir_produto import inserir_produto
-from tela_listar_produto import excluir_produto
+from tela_listar_produto import exibir_produtos
 
 def abrir_tela_produto(master=None):
     def cadastrar_produto():
@@ -46,5 +46,6 @@ def abrir_tela_produto(master=None):
 
 
     tk.Button(janela, text="Cadastrar", command=cadastrar_produto).pack(pady=15)
+    tk.Button(janela, text="Cadastrar", command=exibir_produtos).pack(pady=15)
 
     return janela

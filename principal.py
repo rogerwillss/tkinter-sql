@@ -1,6 +1,6 @@
 import tkinter as tk
 from tkinter import messagebox
-from cad_produto import abrir_tela_produtos
+from cad_produto import abrir_tela_produto
 from cad_usuario import abrir_tela_usuarios
 from cad_cliente import abrir_tela_clientes
 from cad_funcionario import abrir_tela_funcionarios
@@ -14,7 +14,7 @@ def abrir_funcionarios():
     abrir_tela_funcionarios(root)
 
 def abrir_produtos():
-    abrir_tela_produtos(root)
+    abrir_tela_produto(root)
 
 def abrir_usuarios():
     abrir_tela_usuarios(root)
